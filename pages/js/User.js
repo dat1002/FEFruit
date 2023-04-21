@@ -135,7 +135,7 @@ function handleDeleteUser(id){
     'Authorization': 'Bearer ' + localStorage.getItem('Bearer'),
     },
   };
-  if(confirm("Are you sure delete?"))
+  if(confirm("Bạn có chắc chắn muốn xóa?"))
     fetch(userDelete+'/'+id, options)
   .then(function(response) {
     response.json();

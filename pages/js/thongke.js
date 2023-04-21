@@ -32,7 +32,6 @@ function start() {
     var dataY = tf;
     console.log("dataY: ",dataY);
     dataX = tf;
-    console.log(dataX[1]);
     console.log(tf);
       return `
       <h3>${tf}</h3>

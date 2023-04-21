@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTSK-FOOD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../images/b.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+  <header>
+    <div class="header">
+        <!-- Nội dung phần header bên trái -->
+        <div class="h-left">
+            <div class="logo" style="color:#86BA09;">
+                <h3 class="">FTSK-FOOD</h3>
+                <!-- Có thể là ảnh -->
+            </div>
+        </div>
+
+         <!-- Nội dung phần header giữa -->
+        <div class="h-mid">
+            <div class="main-menu">
+                <ul class="d-flex justify-content-center">
+                    <li class="">
+                        <a href="#">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Cửa hàng
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Kiến thức
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="h-right d-flex justify-content-center">
+            <div class="h-right-form_search position-relative">
+                <form method="GET" action="#">
+                    <input type="text" name="keyword" placeholder="Tìm kiếm ...">
+                    <button type="submit" class="position-absolute"> 
+                        <!-- position-absolute -->
+                        <i class="fal fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="ps-4">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle" style="font-size: 20px;"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
+                      <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                    </ul>
+                  </div>
+
+            </div>
+            <!-- <div class="pt-2 ps-4">
+                <a href="#" class="text-dark" style="text-decoration: none;">
+                    <span class="icon-btn-login"><i class="fas fa-user-circle" style="font-size: 20px;"></i></span>
+                </a>
+            </div> -->
+            <div class="">
+                <!-- <a id="cart-shop" href="#" class="text-dark ps-4" style="text-decoration: none;">
+                    <span class="icon_top_cart"><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></span>
+                    <span class="cart " id="count-item" data-count=" 0"><span class='text-danger'>(0)</span></span>
+                </a> -->
+                <div id="cart-shop"  class="dropdown cart-hover">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="icon_top_cart">
+                          <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
+                        </span>
+                        <span class="cart " id="count-item" data-count=" 0"><span class='text-danger'>(0)</span></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li>
+                        <div class="dropdown-item-a" href="#">
+                          <div class="item">
+                            <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470.jpg" width="60" alt="">
+                            <div class="item-inf">
+                                <div class="name-and-selection">
+                                    <div class="name">Nho ninh thuận</div>
+                                    <div class="img-delete">
+                                        <img src="../../img/delete.png"  width="20" alt="">
+                                    </div>
+                                </div>
+                                <div class="price-and-quantity">
+                                    <div class="price">250.000 </div>
+                                    <div class="quantity"> x 1</div>
+                                </div>                                   
+                            </div>
+                          </div>
+                          <hr style="width: 90%; margin: auto; ">
+                          <div class="item pt-3">
+                              <button type="button" class="btn btn-primary" style="width: 90%; margin: auto; font-weight: 550;">
+                                  THANH TOÁN
+                              </button>
+                          </div>  
+                        </div>
+                      </li>
+                      
+                    </ul>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>   
+    </div>
+  </header>
+  <main>
+      <!-- Đây là baner -->
+    <banner>
+        <div class="banner">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://f9-zpcloud.zdn.vn/8353136554235659490/6b845da9f0b72ce975a6.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://f9-zpcloud.zdn.vn/2081364547193406833/bb893974986a44341d7b.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://f9-zpcloud.zdn.vn/8353136554235659490/6b845da9f0b72ce975a6.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div> 
+        </div>
+    </banner>
+    <content>
+        <div class="b-top-content">
+            <div class="row">
+              <div class="img-has-hover" style="width: 550px;">
+                <a href="#">
+                  <div class="img-inner bg-image hover-zoom">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner36.jpg" class="w-100"> 
+                  </div>
+                </a>
+              </div>
+              <div class="img-has-hover" style="width: 550px;">
+                <a href="#">
+                  <div class="img-inner bg-image hover-zoom">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner35.jpg" class="w-100"> 
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="img-has-hover" style="width: 550px;">
+                <a href="#">
+                  <div class="img-inner bg-image hover-zoom">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner34.jpg" class="w-100"> 
+                  </div>
+                </a>
+              </div>
+              <div class="img-has-hover" style="width: 550px;">
+                <a href="#">
+                  <div class="img-inner bg-image hover-zoom">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner28.jpg" class="w-100"> 
+                  </div>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="content">
+          <div class="container">
+              <h4>SẢN PHẨM GIẢM GIÁ</h4>
+              <div class="list-product list-product-new">
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                      <div class="card" style="width: 18rem;">
+                          <div class="img-inner">
+                            <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470.jpg"  class="img-fly" width="100%"  alt="">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                              <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                              <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                          </div>
+                          <div class="card-body-2">
+                              <div class="details">
+                                  <i class="fal fa-info-circle"></i>
+                              </div>
+                              <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-23-470x470.jpg" class="img-fly" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470.jpg" class="img-fly" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-25-470x470.jpg" class="img-fly" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <h4>SẢN PHẨM MỚI</h4>
+              <div class="list-product list-product-new">
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                      <div class="card" style="width: 18rem;">
+                          <div class="img-inner">
+                            <img src="" width="100%"  alt="">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                              <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                              <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                          </div>
+                          <div class="card-body-2">
+                              <div class="details">
+                                  <i class="fal fa-info-circle"></i>
+                              </div>
+                              <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-23-470x470.jpg" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470.jpg" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-25-470x470.jpg" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <h4>SẢN PHẨM HOT</h4>
+              <div class="list-product list-product-new">
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                      <div class="card" style="width: 18rem;">
+                          <div class="img-inner">
+                            <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470.jpg" width="100%"  alt="">
+                          </div>
+                          <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                              <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                              <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                          </div>
+                          <div class="card-body-2">
+                              <div class="details">
+                                  <i class="fal fa-info-circle"></i>
+                              </div>
+                              <div class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-23-470x470.jpg" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470.jpg" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="img-inner">
+                          <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-25-470x470.jpg" width="100%"  alt="">
+                        </div>
+                        <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                            <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                            <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                        </div>
+                        <div class="card-body-2">
+                            <div class="details">
+                                <i class="fal fa-info-circle"></i>
+                            </div>
+                            <button type="button" class="add-to-cart">
+                                  <i class="fal fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <br>
+          </div>
+
+          <!-- Siêu sale -->
+          <div class="bg-sale" style="background-image: url(http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner25.jpg); max-width: 100% !important; height: 20rem; padding: 0px !important;" >
+            <div class="row align-center"  id="row-878997595">
+              <div class="col medium-8 small-12 large-5"  >
+                <div class="col-inner text-center dark"  >
+                  <h1 style="background: url(//wpbingosite.com/wordpress/kola/wp-content/themes/kola/css/../images/bottom3.png) bottom no-repeat; margin-top: 5rem; margin-bottom: 24px;
+                  color: #fff;
+                  font-size: 40px;
+                  font-family: Roboto Slab,serif;
+                  text-transform: capitalize;
+                  padding-bottom: 34px;">
+                  <a href="#" class="sale-hover" style="color: #fff; text-decoration: none;">Siêu Khuyến Mãi<hr> </a> </h1>
+                  <p style="color: #fff;  font-family: Roboto Slab,serif;   font-size: 25px; ">Cơ hội để gia đình bạn sở hữu những sản phẩm ưu đãi</p>
+                </div>  
+              </div>
+            </div>    
+          </div>
+          <div class="container">
+            <div class="list-product list-product-new" style="margin-top: -6rem;">
+              <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                  <div class="card" style="width: 18rem;">
+                      <div class="img-inner">
+                        <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470.jpg" width="100%"  alt="">
+                      </div>
+                      <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                          <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                          <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                      </div>
+                      <div class="card-body-2">
+                          <div class="details">
+                              <i class="fal fa-info-circle"></i>
+                          </div>
+                          <div class="add-to-cart">
+                              <i class="fal fa-shopping-cart"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="img-inner">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-23-470x470.jpg" width="100%"  alt="">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                        <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                        <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                    </div>
+                    <div class="card-body-2">
+                        <div class="details">
+                            <i class="fal fa-info-circle"></i>
+                        </div>
+                        <div class="add-to-cart">
+                            <i class="fal fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="img-inner">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-15-470x470.jpg" width="100%"  alt="">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                        <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                        <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                    </div>
+                    <div class="card-body-2">
+                        <div class="details">
+                            <i class="fal fa-info-circle"></i>
+                        </div>
+                        <div class="add-to-cart">
+                            <i class="fal fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="product col-12 col-sm-6 col-lg-3 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="img-inner">
+                      <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-25-470x470.jpg" width="100%"  alt="">
+                    </div>
+                    <div class="card-body" style="margin-bottom: 30px; padding-top: 15px;">
+                        <div class="product-name"><b>Nho Ninh Thuận</b></div> <br>
+                        <div class="product-price" style="color: #86ba09;"> <b>250.000 ₫</b></div>
+                    </div>
+                    <div class="card-body-2">
+                        <div class="details">
+                            <i class="fal fa-info-circle"></i>
+                        </div>
+                        <div class="add-to-cart">
+                            <i class="fal fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div id="carouselExampleCaptions s2" class="carousel slide m-5" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://f10-zpcloud.zdn.vn/3082684604858403568/013faa198fc0539e0ad1.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://f10-zpcloud.zdn.vn/1514008017346493182/6990437b66a2bafce3b3.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="https://f10-zpcloud.zdn.vn/3082684604858403568/013faa198fc0539e0ad1.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div> 
+          </div>
+          <contact>
+            <div class="bg-sale" style="background-image: url(http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner25.jpg); max-width: 100% !important; height: 20rem; padding: 0px !important;" >
+                <div class="row align-center"  id="row-878997595">
+                  <div class="col medium-8 small-12 large-5"  >
+                    <div class="col-inner text-center dark"  >
+                      <h1 style="background: url(//wpbingosite.com/wordpress/kola/wp-content/themes/kola/css/../images/bottom3.png) bottom no-repeat; margin-top: 5rem; margin-bottom: 24px;
+                      color: #fff;
+                      font-size: 40px;
+                      font-family: Roboto Slab,serif;
+                      text-transform: capitalize;
+                      padding-bottom: 34px;">Đăng ký để nhận cập nhật</h1>
+                      <p style="color: #fff;  font-family: Roboto Slab,serif;   font-size: 25px; ">Để lại email để không bỏ lỡ bất kì ưu đãi nào</p>
+                      <span class="wpcf7-form-control-wrap email-dang-ky"><input type="email" name="email-dang-ky" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form_dang_ky" id="email-dang-ky" style="    border-radius: 99px 0 0 99px !important;
+                        padding:5px 30px; border: none;" aria-required="true" aria-invalid="false" placeholder="Email ..."></span>
+                      <input type="submit" value="Đăng ký" class="wpcf7-form-control wpcf7-submit form_dang_ky" style="border-radius: 0 99px 99px 0 !important; background-color: #86BA09;
+                      padding: 5px 30px; border: none;" id="btn-gui">
+                    </div>  
+                  </div>
+                </div>    
+              </div>
+              <div class="link-to-zalo">
+                  <a href="https://zalo.me/0972395389">
+                  <img src="../../img/logo-zalo-vector.png" width="100%" alt="">
+                  </a>
+              </div>
+              <a class="back-to-top" href="#top" style="display: block;"><i class="far fa-arrow-to-top"></i></a>
+        </contact>
+    </content>
+    
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="contact" >
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>GỌI MUA HÀNG (08:30-22:00)</h6>
+              <div class="phone_number">
+                  <span class="icon_phone_footer " >
+                      <i class="fas fa-phone-alt "></i>
+                  </span>
+                  <a  href="#">0972395389</a>
+              </div>
+              <h6>Tất cả các ngày trong tuần</h6>
+          </div>
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>GÓP Ý, KHIẾU NẠI (08:30-22:00)</h6>
+              <div class="phone_number">
+                  <span class="icon_phone_footer  ">
+                      <i class="fas fa-phone-alt "></i>
+                  </span>
+                  <a  href="#">0972395389</a>
+              </div>
+              <h6>Các ngày trong tuần(Trừ nghỉ lễ)</h6>
+          </div>
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>ĐĂNG KÝ NHẬN THÔNG TIN MỚI</h6>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Nhập email bạn tại đây..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="button-subscribe text-white " type="button" id="button-addon2">   Đăng ký   </button>
+              </div>
+          </div>
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>THEO DÕI CHÚNG TÔI</h6>
+              <div class="link_to_account ">
+                  <a href="https://www.facebook.com/profile.php?id=100004302647746" >
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://www.instagram.com/nvd389/" >
+                      <i class="fab fa-instagram"></i>	
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="container pt-5" style="background-color: #e4ebeb; max-width: 100%;">
+        <div class="store-informations"> 
+          <div class="store-information col-12 col-sm-6 col-lg-3">
+            <h6>CHÍNH SÁCH VÀ QUY ĐỊNH</h6>
+            <ul class="list-group-flush">
+              <a href="#"><li>Cách thức đặt hàng </li></a>
+              <a href="#"><li>Chính sách thành viên </li></a>
+              <a href="#"><li>Chính sách giao hàng</li></a>
+              <a href="#"><li>Quy định đổi trả </li></a>
+              <a href="#"><li>Hình thức thanh toán </li></a>
+              <a href="#"><li>Chính sách bảo mật </li></a>
+              <a href="#"><li>Chính sách xử lý khiêu nại </li></a>
+            </ul>
+          </div>
+          <div class="store-information col-12 col-sm-6 col-lg-3" >
+            <h6>HỆ THỐNG CỬA HÀNG</h6>
+            <ul class="list-group" style="list-style-type: none;" >
+              <li>►79 My Điền, Việt Yên </li>
+              <li>►82 Nội Đình, Yên Sơn </li>
+              <li>►125 Cầu Giấy </li>
+            </ul>
+          </div>
+          <div class="store-information col-12 col-sm-6 col-lg-3">
+            <h6>VỀ CHÚNG TÔI</h6>
+            <ul class="list-group-flush">
+              <li><b>Công ty TNHH TIME MAN</b></li>
+              <li><b>Địa chỉ: </b> Số 344 Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội </li>
+              <li><b>Mã số doanh nghiệp:</b> 0108901419 do Sở kế hoạch và đầu tư thành phố Hà Nội cấp ngày 17/09/2019</li>
+              <li><b>Điện thoại:</b> 0972395389	</li>
+              <li><b>Email:</b> nvdat1002@gmail.com	</li>
+            </ul>
+          </div>
+          <div class="store-information col-12 col-sm-6 col-lg-3">
+            <h6>PAGE CHÚNG TÔI</h6>
+            <ul class="list-group" style="list-style-type: none; flex-wrap: wrap;" >
+              <li><a  href="https://www.facebook.com/Shop-free-1757794477583091/?notif_id=1624597893963257&notif_t=page_user_activity&ref=notif">
+                
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
+
+
+<!-- Page specific script -->
+<script src="../../js_admin/them.js"></script>
+<!-- include summernote css/js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<script src="../../js_admin/jquery-ui.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>

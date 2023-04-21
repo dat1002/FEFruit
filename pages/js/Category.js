@@ -78,7 +78,7 @@ function handleDeleteCategory(id){
               'Authorization': 'Bearer ' + localStorage.getItem('Bearer'),
               },
   };
-  if(confirm("Are you sure delete?"))
+  if(confirm("Bạn có chắc chắn muốn xóa?"))
     fetch(categoryDelete+'/'+id, options)
   .then(function(response) {
     response.json();

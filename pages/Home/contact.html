@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTSK-FOOD-INFORMATION</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../images/b.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+  <header>
+    <div class="header">
+        <!-- Nội dung phần header bên trái -->
+        <div class="h-left">
+            <div class="logo" style="color:#86BA09;">
+                <h3 class="">FTSK-FOOD</h3>
+                <!-- Có thể là ảnh -->
+            </div>
+        </div>
+
+         <!-- Nội dung phần header giữa -->
+        <div class="h-mid">
+            <div class="main-menu">
+                <ul class="d-flex justify-content-center">
+                    <li class="">
+                        <a href="#">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Giới thiệu
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Cửa hàng
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Kiến thức
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                            Liên hệ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="h-right d-flex justify-content-center">
+            <div class="h-right-form_search position-relative">
+                <form method="GET" action="#">
+                    <input type="text" name="keyword" placeholder="Tìm kiếm ...">
+                    <button type="submit" class="position-absolute"> 
+                        <!-- position-absolute -->
+                        <i class="fal fa-search"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="ps-4">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle" style="font-size: 20px;"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Thông tin cá nhân</a></li>
+                      <li><a class="dropdown-item" href="#">Đăng xuất</a></li>
+                    </ul>
+                  </div>
+
+            </div>
+            <!-- <div class="pt-2 ps-4">
+                <a href="#" class="text-dark" style="text-decoration: none;">
+                    <span class="icon-btn-login"><i class="fas fa-user-circle" style="font-size: 20px;"></i></span>
+                </a>
+            </div> -->
+            <div class="">
+                <!-- <a id="cart-shop" href="#" class="text-dark ps-4" style="text-decoration: none;">
+                    <span class="icon_top_cart"><i class="fas fa-shopping-cart" style="font-size: 20px;"></i></span>
+                    <span class="cart " id="count-item" data-count=" 0"><span class='text-danger'>(0)</span></span>
+                </a> -->
+                <div id="cart-shop"  class="dropdown cart-hover">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="icon_top_cart">
+                          <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>
+                        </span>
+                        <span class="cart " id="count-item" data-count=" 0"><span class='text-danger'>(0)</span></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li>
+                        <div class="dropdown-item-a" href="#">
+                          <div class="item">
+                            <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/product-9-470x470.jpg" width="60" alt="">
+                            <div class="item-inf">
+                                <div class="name-and-selection">
+                                    <div class="name">Nho ninh thuận</div>
+                                    <div class="img-delete">
+                                        <img src="../../img/delete.png"  width="20" alt="">
+                                    </div>
+                                </div>
+                                <div class="price-and-quantity">
+                                    <div class="price">250.000 </div>
+                                    <div class="quantity"> x 1</div>
+                                </div>                                   
+                            </div>
+                          </div>
+                          <hr style="width: 90%; margin: auto; ">
+                          <div class="item pt-3">
+                              <button type="button" class="btn btn-primary" style="width: 90%; margin: auto; font-weight: 550;">
+                                  THANH TOÁN
+                              </button>
+                          </div>  
+                        </div>
+                      </li>
+                      
+                    </ul>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>   
+    </div>
+  </header>
+  <main>
+    <div class="bg-show-information" style="background-image: url(http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2019/05/banner25.jpg); max-width: 100% !important; height: 12rem; padding: 0px !important; opacity: 0.9;" >
+        <div class="row align-center"  id="row-878997595">
+          <div class="col medium-8 small-12 large-5"  >
+            <div class="col-inner text-center dark"  >
+              <h3 style="background: url(//wpbingosite.com/wordpress/kola/wp-content/themes/kola/css/../images/bottom3.png) bottom no-repeat; margin-top:2rem; margin-bottom: 24px;
+              color: #fff;
+              font-size: 40px;
+              font-family: Roboto Slab,serif;
+              text-transform: capitalize;
+              padding-bottom: 25px;">
+              <a href="#" class="sale-hover" style="color: #fff; text-decoration: none;">KIẾN THỨC<hr> </a> </h3>
+              <p style="color: #fff;  font-family: Roboto Slab,serif;   font-size: 15px; ">
+                <a href="#" class="" style="color: #fff; text-decoration: none; ">TRANG CHỦ </a> /
+                <a href="#" class="" style="color: #fff; text-decoration: none; ">KIẾN THỨC </a>
+              </p>
+            </div>  
+          </div>
+        </div>    
+    </div>
+    <div class="body w-100">
+        <div class="content w-75 d-flex justify-content-between m-auto mt-5">
+            <div class="map w-50">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d251637.95196238213!2d105.6189045!3d9.779349!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1682069480504!5m2!1svi!2s" width="90%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact w-50">
+                <div class="store-location d-flex" style="width: 85%;">
+                    <div class="img">
+                        <img src="http://mauweb.monamedia.net/cleverfood/wp-content/uploads/2018/04/logo-mona.png" width="120" alt="">
+                    </div>                    
+                    <div class="location">
+                        <ul class="">
+                            <li><b>Công ty TNHH TIME MAN</b></li>
+                            <li><b>Địa chỉ: </b> Số 344 Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội </li>
+                            <li><b>Mã số doanh nghiệp:</b> 0108901419 do Sở kế hoạch và đầu tư thành phố Hà Nội cấp ngày 17/09/2019</li>
+                            <li><b>Điện thoại:</b> 0972395389	</li>
+                            <li><b>Email:</b> nvdat1002@gmail.com	</li>
+                          </ul>
+                    </div>
+                </div>
+                <div class="contact-form mt-5">
+                    <form action="" method="POST" class="d-flex " style="flex-wrap: wrap;">
+                        <input type="text" class="" name="" placeholder="Họ và tên">
+                        <input type="text" class="" name="" placeholder="Email">
+                        <input type="text" class="" name="" placeholder="Số điện thoại">
+                        <input type="text" class="" name="" placeholder="Địa chỉ">
+                        <textarea type="text" class="p-1" name="" placeholder="Lời nhắn" style="width: 98%; height: 150px;" ></textarea>
+                        <button type="submit" class="btn w-25 mt-3 m-auto" style="background-color: #86BA09;color: #fff; "><b>GỬI</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="contact" >
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>GỌI MUA HÀNG (08:30-22:00)</h6>
+              <div class="phone_number">
+                  <span class="icon_phone_footer " >
+                      <i class="fas fa-phone-alt "></i>
+                  </span>
+                  <a  href="#">0972395389</a>
+              </div>
+              <h6>Tất cả các ngày trong tuần</h6>
+          </div>
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>GÓP Ý, KHIẾU NẠI (08:30-22:00)</h6>
+              <div class="phone_number">
+                  <span class="icon_phone_footer  ">
+                      <i class="fas fa-phone-alt "></i>
+                  </span>
+                  <a  href="#">0972395389</a>
+              </div>
+              <h6>Các ngày trong tuần(Trừ nghỉ lễ)</h6>
+          </div>
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>ĐĂNG KÝ NHẬN THÔNG TIN MỚI</h6>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Nhập email bạn tại đây..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="button-subscribe text-white " type="button" id="button-addon2">   Đăng ký   </button>
+              </div>
+          </div>
+          <div class="contact_with_shop col-12 col-sm-6 col-lg-3">
+              <h6>THEO DÕI CHÚNG TÔI</h6>
+              <div class="link_to_account ">
+                  <a href="https://www.facebook.com/profile.php?id=100004302647746" >
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://www.instagram.com/nvd389/" >
+                      <i class="fab fa-instagram"></i>	
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="container pt-5" style="background-color: #e4ebeb; max-width: 100%;">
+        <div class="store-informations"> 
+          <div class="store-information col-12 col-sm-6 col-lg-3">
+            <h6>CHÍNH SÁCH VÀ QUY ĐỊNH</h6>
+            <ul class="list-group-flush">
+              <a href="#"><li>Cách thức đặt hàng </li></a>
+              <a href="#"><li>Chính sách thành viên </li></a>
+              <a href="#"><li>Chính sách giao hàng</li></a>
+              <a href="#"><li>Quy định đổi trả </li></a>
+              <a href="#"><li>Hình thức thanh toán </li></a>
+              <a href="#"><li>Chính sách bảo mật </li></a>
+              <a href="#"><li>Chính sách xử lý khiêu nại </li></a>
+            </ul>
+          </div>
+          <div class="store-information col-12 col-sm-6 col-lg-3" >
+            <h6>HỆ THỐNG CỬA HÀNG</h6>
+            <ul class="list-group" style="list-style-type: none;" >
+              <li>►79 My Điền, Việt Yên </li>
+              <li>►82 Nội Đình, Yên Sơn </li>
+              <li>►125 Cầu Giấy </li>
+            </ul>
+          </div>
+          <div class="store-information col-12 col-sm-6 col-lg-3">
+            <h6>VỀ CHÚNG TÔI</h6>
+            <ul class="list-group-flush">
+              <li><b>Công ty TNHH TIME MAN</b></li>
+              <li><b>Địa chỉ: </b> Số 344 Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Thành phố Hà Nội </li>
+              <li><b>Mã số doanh nghiệp:</b> 0108901419 do Sở kế hoạch và đầu tư thành phố Hà Nội cấp ngày 17/09/2019</li>
+              <li><b>Điện thoại:</b> 0972395389	</li>
+              <li><b>Email:</b> nvdat1002@gmail.com	</li>
+            </ul>
+          </div>
+          <div class="store-information col-12 col-sm-6 col-lg-3">
+            <h6>PAGE CHÚNG TÔI</h6>
+            <ul class="list-group" style="list-style-type: none; flex-wrap: wrap;" >
+              <li><a  href="https://www.facebook.com/Shop-free-1757794477583091/?notif_id=1624597893963257&notif_t=page_user_activity&ref=notif">
+                
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
+
+
+<!-- Page specific script -->
+<script src="../../js_admin/them.js"></script>
+<!-- include summernote css/js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<script src="../../js_admin/jquery-ui.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>

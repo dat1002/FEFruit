@@ -1,8 +1,14 @@
 var getDoanhThu = "http://localhost:8080/statistical";
+
+var getTopNv = "http://localhost:8080/statistical/staff-asc";
+
 var dataX = new Array();
 function start() {
     getDoanhThuNam(function (dt) {
       renderDoanhThuNam(dt);
+    });
+    getTopNhanVien(function (nv){
+      renderTopNV(nv);
     });
   }
   start();
@@ -24,6 +30,8 @@ function start() {
   
   function renderDoanhThuNam(dt){
     sessionStorage.setItem('datainput',dt.result)
+    console.log('Đây lấy: ')
+    console.log(dt);
       dataX = dt.result;
       var tongThu = 0;
       for(var i=0; i<dataX.length; i++){
@@ -113,6 +121,28 @@ function start() {
       return dataX = dt.result;
   }
 
+    // Top nhân viên
+    function getTopNhanVien(callback){
+      var options = {
+        method: 'GET',
+        headers: {'Content-Type': 'application/json',
+                  'Authorization': 'Bearer ' + localStorage.getItem('Bearer'),
+                  },
+      };
+      fetch(getTopNv+"?start=2022-01-25&end=2022-12-26",options)
+      .then(function(response){
+        return response.json();
+      })
+      .then(callback);
+    }
+    function  renderTopNV(nv){
+      console.log("Đây là NV: ",nv.Đạt);
+      var dataNV = nv;
+      console.log(dataNV);
+        return `
+        <h3>${nv}</h3>
+          `;
+    }
 
 $(function () {
     'use strict'

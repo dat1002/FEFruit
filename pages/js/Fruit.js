@@ -136,7 +136,7 @@ function handleDeleteFruit(id){
                 'Authorization': 'Bearer ' + localStorage.getItem('Bearer'),
                 },
   };
-  if(confirm("Are you sure delete?"))
+  if(confirm("Bạn có chắc muốn xóa?"))
     fetch(fruitDelete+'/'+id, options)
   .then(function(response) {
     response.json();
